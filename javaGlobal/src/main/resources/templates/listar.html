@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Brinquedos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Lista de Brinquedos</h1>
+<div class="container-link">
+    <a href="/products/novo">Adicionar Novo Brinquedo</a>
+</div>
+<ul>
+    <li th:each="product : ${products}">
+        <h2 th:text="${product.nome}">Nome do Brinquedo</h2>
+        <p th:text="${product.descricao}">Descrição do Brinquedo</p>
+    </li>
+</ul>
+</body>
+</html>
